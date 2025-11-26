@@ -1,5 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { GraduationCap, Users, Sparkles, Gift } from "lucide-react";
+import AnimatedSection from "./AnimatedSection";
+import { motion } from "framer-motion";
 
 const WhyJoinSection = () => {
   const reasons = [
@@ -26,28 +28,53 @@ const WhyJoinSection = () => {
   ];
 
   return (
-    <section className="py-20 px-4 md:px-8 lg:px-16 bg-secondary">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-black mb-12 text-center">
-          Why Join Now?
-        </h2>
+    <section className="py-20 px-4 md:px-8 lg:px-16 bg-secondary/20 relative">
+      {/* Floating Orb */}
+      <motion.div
+        className="absolute bottom-20 left-10 w-80 h-80 rounded-full bg-primary/8 blur-3xl"
+        animate={{
+          x: [0, -40, 0],
+          y: [0, 40, 0],
+          scale: [1, 1.15, 1],
+        }}
+        transition={{
+          duration: 9,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+
+      <div className="max-w-6xl mx-auto relative z-10">
+        <AnimatedSection>
+          <h2 className="text-4xl md:text-5xl font-black mb-12 text-center">
+            Why Join Now?
+          </h2>
+        </AnimatedSection>
 
         <div className="grid md:grid-cols-2 gap-8">
           {reasons.map((reason, index) => {
             const Icon = reason.icon;
             return (
-              <Card 
-                key={index} 
-                className="p-8 hover:shadow-xl transition-all hover:scale-105 bg-background border-0"
-              >
-                <div className="bg-primary rounded-full w-16 h-16 flex items-center justify-center mb-6">
-                  <Icon className="text-primary-foreground" size={32} />
-                </div>
-                <h3 className="text-xl font-bold mb-4">{reason.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {reason.description}
-                </p>
-              </Card>
+              <AnimatedSection key={index} delay={index * 0.1}>
+                <motion.div
+                  whileHover={{ y: -10, scale: 1.03 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <Card className="p-8 hover:shadow-2xl transition-all bg-background border-border/50 backdrop-blur-sm h-full">
+                    <motion.div 
+                      className="bg-gradient-to-br from-primary to-primary/80 rounded-full w-16 h-16 flex items-center justify-center mb-6 shadow-lg"
+                      whileHover={{ rotate: 360 }}
+                      transition={{ duration: 0.6 }}
+                    >
+                      <Icon className="text-primary-foreground" size={32} />
+                    </motion.div>
+                    <h3 className="text-xl font-bold mb-4">{reason.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {reason.description}
+                    </p>
+                  </Card>
+                </motion.div>
+              </AnimatedSection>
             );
           })}
         </div>
