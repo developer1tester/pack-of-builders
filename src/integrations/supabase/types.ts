@@ -41,6 +41,33 @@ export type Database = {
         }
         Relationships: []
       }
+      webhook_config: {
+        Row: {
+          api_key: string
+          created_at: string | null
+          supabase_url: string | null
+          table_name: string
+          updated_at: string | null
+          webhook_url: string
+        }
+        Insert: {
+          api_key: string
+          created_at?: string | null
+          supabase_url?: string | null
+          table_name: string
+          updated_at?: string | null
+          webhook_url: string
+        }
+        Update: {
+          api_key?: string
+          created_at?: string | null
+          supabase_url?: string | null
+          table_name?: string
+          updated_at?: string | null
+          webhook_url?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

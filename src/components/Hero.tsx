@@ -51,9 +51,12 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="text-lg px-8 py-6 font-bold group hover:scale-105 transition-all shadow-lg hover:shadow-xl"
+              asChild
             >
-              Join the Pack
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              <a href="https://www.skool.com/meerkats-ai-3387" target="_blank" rel="noopener noreferrer">
+                Join the Pack
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
             <p className="text-sm text-muted-foreground">
               No credit card. No trials. 100% free.
