@@ -1,1 +1,4 @@
 project_id = "hmxtlezsaxdxqkfcwkea"
+
+[functions.meerkats_automation]
+verify_jwt = false
