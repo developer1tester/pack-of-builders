@@ -61,9 +61,12 @@ const CTASection = () => {
             <Button 
               size="lg" 
               className="text-xl px-12 py-8 font-bold group shadow-2xl hover:shadow-primary/25 transition-all"
+              asChild
             >
-              Join Free Community
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={28} />
+              <a href="https://www.skool.com/meerkats-ai-3387" target="_blank" rel="noopener noreferrer">
+                Join Free Community
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={28} />
+              </a>
             </Button>
           </motion.div>
         </AnimatedSection>
