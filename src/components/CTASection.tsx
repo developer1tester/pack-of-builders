@@ -34,20 +34,20 @@ const CTASection = () => {
 
       <div className="max-w-5xl mx-auto text-center relative z-10">
         <AnimatedSection>
-          <h2 className="text-5xl md:text-6xl font-black mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6">
             Join the Pack.{" "}
             <span className="text-primary">It's Free (for now).</span>
           </h2>
         </AnimatedSection>
 
         <AnimatedSection delay={0.2}>
-          <p className="text-xl md:text-2xl mb-4 font-medium">
+          <p className="text-lg sm:text-xl md:text-2xl mb-4 font-medium">
             Free courses. Live sessions. Real builders.
           </p>
         </AnimatedSection>
 
         <AnimatedSection delay={0.3}>
-          <p className="text-lg md:text-xl text-muted-foreground mb-12">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-12">
             Everything you need to move from "vibing" to "launching."
           </p>
         </AnimatedSection>
@@ -60,12 +60,12 @@ const CTASection = () => {
           >
             <Button 
               size="lg" 
-              className="text-xl px-12 py-8 font-bold group shadow-2xl hover:shadow-primary/25 transition-all"
+              className="text-base sm:text-lg md:text-xl px-6 sm:px-10 md:px-12 py-6 sm:py-7 md:py-8 font-bold group shadow-2xl hover:shadow-primary/25 transition-all"
               asChild
             >
               <a href="https://www.skool.com/meerkats-ai-3387" target="_blank" rel="noopener noreferrer">
                 Join Free Community
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={28} />
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={24} />
               </a>
             </Button>
           </motion.div>

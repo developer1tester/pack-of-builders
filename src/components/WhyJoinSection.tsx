@@ -51,7 +51,7 @@ const WhyJoinSection = () => {
           </h2>
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {reasons.map((reason, index) => {
             const Icon = reason.icon;
             return (
@@ -60,7 +60,7 @@ const WhyJoinSection = () => {
                   whileHover={{ y: -10, scale: 1.03 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <Card className="p-8 hover:shadow-2xl transition-all bg-background border-border/50 backdrop-blur-sm h-full">
+                  <Card className="p-6 md:p-8 hover:shadow-2xl transition-all bg-background border-border/50 backdrop-blur-sm h-full">
                     <motion.div 
                       className="bg-gradient-to-br from-primary to-primary/80 rounded-full w-16 h-16 flex items-center justify-center mb-6 shadow-lg"
                       whileHover={{ rotate: 360 }}
