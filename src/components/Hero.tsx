@@ -25,7 +25,7 @@ const Hero = () => {
       <div className="flex-1 flex items-center justify-center px-4 md:px-8 lg:px-16 py-12 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           <motion.h1 
-            className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight whitespace-nowrap"
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -34,7 +34,7 @@ const Hero = () => {
           </motion.h1>
           
           <motion.p 
-            className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed px-2"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -50,7 +50,7 @@ const Hero = () => {
           >
             <Button 
               size="lg" 
-              className="text-lg px-8 py-6 font-bold group hover:scale-105 transition-all shadow-lg hover:shadow-xl"
+              className="text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 font-bold group hover:scale-105 transition-all shadow-lg hover:shadow-xl"
               asChild
             >
               <a href="https://www.skool.com/meerkats-ai-3387" target="_blank" rel="noopener noreferrer">

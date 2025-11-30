@@ -42,14 +42,14 @@ const TestimonialsSection = () => {
           </h2>
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
           {testimonials.map((testimonial, index) => (
             <AnimatedSection key={index} delay={index * 0.15}>
               <motion.div
                 whileHover={{ y: -10, scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <Card className="p-8 hover:shadow-2xl transition-all bg-secondary/30 border-border/50 backdrop-blur-sm h-full">
+                <Card className="p-6 md:p-8 hover:shadow-2xl transition-all bg-secondary/30 border-border/50 backdrop-blur-sm h-full">
                   <p className="text-lg mb-6 leading-relaxed font-medium">
                     "{testimonial.quote}"
                   </p>
