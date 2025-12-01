@@ -25,7 +25,7 @@ const Hero = () => {
       <div className="flex-1 flex items-center justify-center px-4 md:px-8 lg:px-16 py-12 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           <motion.h1 
-            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight"
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight whitespace-nowrap"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
