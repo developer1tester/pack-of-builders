@@ -54,13 +54,10 @@ const Hero = () => {
               asChild
             >
               <a href="https://www.skool.com/meerkats-ai-3387" target="_blank" rel="noopener noreferrer">
-                Join the Pack
+                Join the Facebook Group
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
-            <p className="text-sm text-muted-foreground">
-              No credit card. No trials. 100% free.
-            </p>
           </motion.div>
         </div>
       </div>
